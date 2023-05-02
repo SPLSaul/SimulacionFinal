@@ -9,10 +9,11 @@ public partial class MainPage : ContentPage
 	{
 		InitializeComponent();
 	}
-    private void btnGenerador_Clicked(object sender, EventArgs e)
+    private  void btnGenerador_Clicked(object sender, EventArgs e)
 	{
         Navigation.PushAsync(new Generador());
-	}
+
+    }
     private void btnCara_Clicked(object sender, EventArgs e)
     {
 

@@ -4,11 +4,21 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:SimulacionFinal"
-    Shell.FlyoutBehavior="Disabled">
+    BackgroundColor="LightGreen"
+    Shell.FlyoutBehavior="Flyout">
 
     <ShellContent
-        Title="Home"
+        Title="Menu"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 
+    <FlyoutItem Title="Generador">
+        <Tab Title="Numeros Pseudoaleatorios">
+            <ShellContent Title="Generador" ContentTemplate="{DataTemplate local:Paginas.Generador}" Route="Paginas.Generador"/>
+            <ShellContent Title="Prueba de Promedio" ContentTemplate="{DataTemplate local:Paginas.PruebaPromedio}" Route="Paginas.PruebaPromedio"/>
+            <ShellContent Title="Promedio de Frecuencia" ContentTemplate="{DataTemplate local:Paginas.Generador}"/>
+        </Tab>
+    </FlyoutItem>
+
 </Shell>
+
