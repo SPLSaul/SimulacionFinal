@@ -52,6 +52,9 @@
 	  <MauiXaml Update="Paginas\Generador.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Paginas\PromedioFrecuencia.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Paginas\PruebaPromedio.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

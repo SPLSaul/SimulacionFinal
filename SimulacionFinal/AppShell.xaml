@@ -13,12 +13,11 @@
         Route="MainPage" />
 
     <FlyoutItem Title="Generador">
-        <Tab Title="Numeros Pseudoaleatorios">
-            <ShellContent Title="Generador" ContentTemplate="{DataTemplate local:Paginas.Generador}" Route="Paginas.Generador"/>
+        <Tab Title="Numeros Pseudoaleatorios"  >
+            <ShellContent Title="Generador" ContentTemplate="{DataTemplate local:Paginas.Generador}" Route="Paginas.Generador"  />
             <ShellContent Title="Prueba de Promedio" ContentTemplate="{DataTemplate local:Paginas.PruebaPromedio}" Route="Paginas.PruebaPromedio"/>
-            <ShellContent Title="Promedio de Frecuencia" ContentTemplate="{DataTemplate local:Paginas.Generador}"/>
+            <ShellContent Title="Promedio de Frecuencia" ContentTemplate="{DataTemplate local:Paginas.PromedioFrecuencia}"/>
         </Tab>
     </FlyoutItem>
-
 </Shell>
 

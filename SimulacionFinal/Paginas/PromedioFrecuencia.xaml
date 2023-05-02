@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SimulacionFinal.Paginas.PromedioFrecuencia"
+             BackgroundColor="White"             
+             Title="PromedioFrecuencia">
+    <ScrollView>
+        <VerticalStackLayout Spacing="5">
+            <Label 
+            Text="Promedio Frecuencia" TextColor="Black" FontSize="35"   
+            HorizontalOptions="Center" Margin="0,10,0,0"/>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width=".2*"/>
+                    <ColumnDefinition Width=".2*"/>
+                    <ColumnDefinition Width=".2*"/>
+                    <ColumnDefinition Width=".2*"/>
+                    <ColumnDefinition Width=".2*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <Label Text="α:" FontSize="20" TextColor="Black" Grid.Row="0" Grid.ColumnSpan="2" Grid.Column="0" />
+                <Entry Placeholder="MenuDesplegable" FontSize="20" TextColor="Black" Grid.Row="0" Grid.ColumnSpan="2" Grid.Column="2"/>
+                <Label Text="Intervalos" Grid.Row="1" Grid.Column="0" TextColor="Black"/>
+                <Label Text="0 - 0.25" Grid.Row="1" Grid.Column="1" TextColor="Black"/>
+                <Label Text="0.25 - 0.5" Grid.Row="1" Grid.Column="2" TextColor="Black"/>
+                <Label Text="0.5 - 0.75" Grid.Row="1" Grid.Column="3" TextColor="Black"/>
+                <Label Text="0.75 - 1" Grid.Row="1" Grid.Column="4" TextColor="Black"/>
+                <!---Inicio de fila-->
+                <Label Text="FE " Grid.Row="2" Grid.Column="0" TextColor="Black"/>
+                <Label Text="  " Grid.Row="2" Grid.Column="1" TextColor="Black"/>
+                <Label Text="  " Grid.Row="2" Grid.Column="2" TextColor="Black"/>
+                <Label Text="  " Grid.Row="2" Grid.Column="3" TextColor="Black"/>
+                <Label Text="  " Grid.Row="2" Grid.Column="4" TextColor="Black"/>
+                <!---Inicio de fila-->
+                <Label Text="FO " Grid.Row="3" Grid.Column="0" TextColor="Black"/>
+                <Label Text="  " Grid.Row="3" Grid.Column="1" TextColor="Black"/>
+                <Label Text="  " Grid.Row="3" Grid.Column="2" TextColor="Black"/>
+                <Label Text="  " Grid.Row="3" Grid.Column="3" TextColor="Black"/>
+                <Label Text="  " Grid.Row="3" Grid.Column="4" TextColor="Black"/>
+                <!---Inicio de fila-->
+                <Label Text="Chi^2" Grid.Row="4" Grid.Column="0" TextColor="Black"/>
+                <Label Text=" " Grid.Row="4" Grid.Column="1" TextColor="Black"/>
+                <Label Text="  " Grid.Row="4" Grid.Column="2" TextColor="Black"/>
+                <Label Text="  " Grid.Row="4" Grid.Column="3" TextColor="Black"/>
+                <Label Text="  " Grid.Row="4" Grid.Column="4" TextColor="Black"/>
+                <!---Inicio de fila-->
+                <Label Text="Xo^2" Grid.Row="5" Grid.Column="0" TextColor="Black"/>
+                <Label Text=" " Grid.Row="4" Grid.Column="1" TextColor="Black"/>
+                <Label Text="Valor de tablas" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2" TextColor="Black"/>
+                <Label Text=" " Grid.Row="5" Grid.Column="4" TextColor="Black"/>
+                <!---Inicio de Botones-->
+                <Button Text="Calcular"  TextColor="Black" Grid.Row="6" Grid.Column="0" BackgroundColor="LightSalmon" FontSize="25" FontAttributes="Bold" Grid.ColumnSpan="2"/>
+                <Button Text="Limpiar"  TextColor="Black" Grid.Row="6" Grid.Column="3" FontSize="25" BackgroundColor="LightSeaGreen" FontAttributes="Bold"  Grid.ColumnSpan="2"/>
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
