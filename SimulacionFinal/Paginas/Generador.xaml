@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SimulacionFinal.Paginas.Generador"
+             Title="Generador">
+    <ScrollView>
+    <VerticalStackLayout>
+        <Label 
+            Text="Pruebas Estadisticas" TextColor="Black" FontSize="40"   
+            HorizontalOptions="Center" />
+
+            <Label Text="Generador Pseudoaleatorio" TextColor="Black" FontSize="20"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width=".5*"/>
+                <ColumnDefinition Width=".5*"/>
+            </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <Entry Placeholder="Numeros a generar" Grid.ColumnSpan="2" Grid.Row="0" FontSize="20" x:Name="txtNumerosGenerar"/>
+                <Entry Placeholder="A" Grid.Column="0" Grid.Row="1" FontSize="20" BackgroundColor="AliceBlue" x:Name="txtA"/>
+                <Entry Placeholder="c" Grid.Column="1" Grid.Row="1" FontSize="20" x:Name="txtc"/>
+                <Entry Placeholder="Xo" Grid.Column="0" Grid.Row="2" FontSize="20" x:Name="txtXo" />
+                <Entry Placeholder="m" Grid.Column="1" Grid.Row="2" FontSize="20" BackgroundColor="AliceBlue"  x:Name="txtm"/>
+                <Button Text="Generar"  TextColor="Black" Grid.Row="3" Grid.Column="0" BackgroundColor="LightSalmon" FontSize="25" FontAttributes="Bold" Clicked="btnGenerar_Clicked"/>
+                <Button Text="Limpiar"  TextColor="Black" Grid.Row="3" Grid.Column="1" FontSize="25" BackgroundColor="LightSeaGreen" FontAttributes="Bold" Clicked="btnEliminar_Clicked"/>
+            </Grid>
+            <CollectionView x:Name="miCollectionView"  BackgroundColor="PeachPuff" ItemsSource="{Binding _generados}" >
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width=".3*"/>
+                                <ColumnDefinition Width=".7*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="{Binding Iteracion}" Grid.Column="0" FontSize="20" TextColor="Black" />
+                            <Label Text="{Binding numero}" Grid.Column="1" FontSize="20" TextColor="Black"/>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <Label Text="Prueba Promedio" TextColor="Black" FontSize="20"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
