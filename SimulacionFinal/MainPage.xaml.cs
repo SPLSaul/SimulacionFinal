@@ -16,11 +16,11 @@ public partial class MainPage : ContentPage
     }
     private void btnCara_Clicked(object sender, EventArgs e)
     {
-
+        Navigation.PushAsync(new Generador());
     }
     private void btnPI_Clicked(object sender, EventArgs e)
     {
-
+        Navigation.PushAsync(new Generador());
     }
     private void btnInfo_Clicked(object sender, EventArgs e)
     {

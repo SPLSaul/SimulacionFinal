@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SimulacionFinal.Paginas.CaraCruz"
+             Title=" ">
+    <ScrollView>
+        <VerticalStackLayout Spacing="5">
+            <Label 
+            Text="Realizar una apuesta" TextColor="Black" FontSize="40"   
+            HorizontalOptions="Center" Margin="0,10,0,0"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width=".5*"/>
+                    <ColumnDefinition Width=".5*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <Entry Placeholder="Juegos: " Grid.Row="0" Grid.Column="0" FontSize="20" x:Name="txtJuegos" Grid.ColumnSpan="2"  Margin="5"/>
+                <Entry Placeholder="Cantidad en mano: " Grid.Column="0" Grid.Row="1" FontSize="20" BackgroundColor="AliceBlue" Grid.ColumnSpan="2" x:Name="txtMano"  Margin="5"/>
+                <Entry Placeholder="Apuesta Inicial: " Grid.Column="0" Grid.Row="2" FontSize="20" x:Name="txtApuesta" Margin="5" Grid.ColumnSpan="2"/>
+                <Button Text="Jugar"  TextColor="Black" Grid.Row="3" Grid.Column="0" BackgroundColor="LightSalmon" FontSize="25" FontAttributes="Bold"  />
+                <Button Text="Limpiar"  TextColor="Black" Grid.Row="3" Grid.Column="1" FontSize="25" BackgroundColor="LightSeaGreen" FontAttributes="Bold" />
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
