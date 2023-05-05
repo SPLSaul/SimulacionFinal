@@ -75,5 +75,8 @@ public partial class Generador : ContentPage
             {
             DisplayAlert("Error","No se ingreso algun dato correcto, recuerde que tiene que tener valores numericos","Error");
             }
+
+        PruebaPromedio pruebaPromedio = new PruebaPromedio();
+        pruebaPromedio.RecibirLista(viewModel._generados, Almacenar);
     }
 }
