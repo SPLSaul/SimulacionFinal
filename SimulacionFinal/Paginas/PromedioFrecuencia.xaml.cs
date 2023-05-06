@@ -3,11 +3,32 @@ namespace SimulacionFinal.Paginas;
 public partial class PromedioFrecuencia : ContentPage
 {
     public double[] Almacenar;
-
     public PromedioFrecuencia()
 	{
 		InitializeComponent();
-	}
+        BindingContext = this;
+        List<Alfa> alfas = new List<Alfa>()
+        {
+            new Alfa(){ valorAlfa = 0.995},
+            new Alfa(){ valorAlfa = 0.990},
+            new Alfa(){ valorAlfa = 0.975},
+            new Alfa(){ valorAlfa = 0.950},
+            new Alfa(){ valorAlfa = 0.500},
+            new Alfa(){ valorAlfa = 0.050},
+            new Alfa(){ valorAlfa = 0.250},
+            new Alfa(){ valorAlfa = 0.010},
+            new Alfa(){ valorAlfa = 0.005},
+        };
+        PickerAlfa.ItemsSource = alfas;
+
+    }
+    public static double cmbAlpha;
+
+    private void OnPickerAlfaSelectedIndexChanged(object sender, EventArgs e)
+    {
+        Alfa alfaSeleccionado = (Alfa)PickerAlfa.SelectedItem;
+        cmbAlpha = alfaSeleccionado.valorAlfa;
+    }
 
     private void btnCalcular_Clicked(object sender, EventArgs e)
 	{
@@ -70,39 +91,39 @@ public partial class PromedioFrecuencia : ContentPage
                 //Imprime chi acumulada
                 txtChiCuadrada.Text = ChiCuadrada.ToString();
                 //Dependiendo del valor de alfa seleccionado depende del valor de tablas para chi
-                if (double.Parse(cmbAlpha.Text) == 0.995)
+                if (cmbAlpha == 0.995)
                 {
                     ChiTablas = 0.07;
                 }
-                else if (double.Parse(cmbAlpha.Text) == 0.990)
+                else if (cmbAlpha == 0.990)
                 {
                     ChiTablas = 0.11;
                 }
-                else if (double.Parse(cmbAlpha.Text) == 0.975)
+                else if (cmbAlpha == 0.975)
                 {
                     ChiTablas = 0.21;
                 }
-                else if (double.Parse(cmbAlpha.Text) == 0.950)
+                else if (cmbAlpha == 0.950)
                 {
                     ChiTablas = 0.35;
                 }
-                else if (double.Parse(cmbAlpha.Text) == 0.500)
+                else if (cmbAlpha == 0.500)
                 {
                     ChiTablas = 2.36;
                 }
-                else if (double.Parse(cmbAlpha.Text) == 0.050)
+                else if (cmbAlpha == 0.050)
                 {
                     ChiTablas = 7.81;
                 }
-                else if (double.Parse(cmbAlpha.Text) == 0.250)
+                else if (cmbAlpha == 0.250)
                 {
                     ChiTablas = 9.34;
                 }
-                else if (double.Parse(cmbAlpha.Text) == 0.010)
+                else if (cmbAlpha == 0.010)
                 {
                     ChiTablas = 11.34;
                 }
-                else if (double.Parse(cmbAlpha.Text) == 0.005)
+                else if (cmbAlpha == 0.005)
                 {
                     ChiTablas = 12.83;
                 }
@@ -129,5 +150,23 @@ public partial class PromedioFrecuencia : ContentPage
         {
             DisplayAlert("Mensaje", "Aun no se han generado los numeros pseudoaleatorios", "Ok");
         }
+    }
+
+    private void btnLimpiar_Clicked(object sender, EventArgs e)
+    {
+        txtChi1.Text = string.Empty;
+        txtChi2.Text = string.Empty;
+        txtChi3.Text = string.Empty;
+        txtChi4.Text = string.Empty;
+        txtChiCuadrada.Text = string.Empty;
+        txtChiTablas.Text = string.Empty;
+        txtFe1.Text = string.Empty;
+        txtFe2.Text = string.Empty;
+        txtFe3.Text = string.Empty;
+        txtFe4.Text = string.Empty;
+        txtFo1.Text = string.Empty;
+        txtFo2.Text = string.Empty;
+        txtFo3.Text = string.Empty;
+        txtFo4.Text = string.Empty;
     }
 }

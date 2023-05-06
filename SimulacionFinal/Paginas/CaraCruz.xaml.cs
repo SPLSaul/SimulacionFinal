@@ -19,7 +19,7 @@ public partial class CaraCruz : ContentPage
 
     private void btnJugar_Clicked(object sender, EventArgs e)
     {
-        if (Almacenar != null)
+        /*if (Almacenar != null)
         {
             try
             {
@@ -123,7 +123,7 @@ public partial class CaraCruz : ContentPage
         else
         {
             DisplayAlert("Mensaje", "Aun no se han generado los numeros pseudoaleatorios", "Ok");
-        }
+        }*/
     }
 }
  

@@ -2,9 +2,10 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SimulacionFinal.Paginas.PruebaPromedio"
+             
              Title="Prueba de Promedio">
-    <ScrollView>
-        <VerticalStackLayout Spacing="5">
+    <ScrollView BackgroundColor="White">
+        <VerticalStackLayout Spacing="5" >
             <Label 
             Text="Prueba de Promedio" TextColor="Black" FontSize="40"   
             HorizontalOptions="Center" Margin="0,10,0,0"/>
@@ -19,12 +20,12 @@
                     <RowDefinition Height="50"/>
                     <RowDefinition Height="50"/>
                 </Grid.RowDefinitions>
-                <Entry Placeholder="Promedio: " Grid.Row="0" Grid.Column="0" FontSize="20" x:Name="txtPromedio"  Margin="5"/>
-                <Entry Placeholder="Area bajo la curva: " Grid.Column="1" Grid.Row="0" FontSize="20" BackgroundColor="AliceBlue" x:Name="txtArea"  Margin="5"/>
-                <Entry Placeholder="α/2: " Grid.Column="0" Grid.Row="1" FontSize="20" x:Name="txtc2" Margin="5"/>
-                <Entry Placeholder="Z α/2: " Grid.Column="1" Grid.Row="1" FontSize="20" x:Name="txtzc2"  Margin="5"/>
-                <Entry Placeholder="Zo: " Grid.Column="0" Grid.Row="2" FontSize="20" BackgroundColor="AliceBlue"  x:Name="txtzo"  Margin="5"/>
-                <Entry Placeholder="α: " Grid.Column="1" Grid.Row="2" FontSize="20" BackgroundColor="AliceBlue"  x:Name="txtc"  Margin="5"/>
+                <Entry Placeholder="Promedio: " TextColor="Black" Grid.Row="0" Grid.Column="0" FontSize="20" x:Name="txtPromedio"  Margin="5"/>
+                <Entry Placeholder="Area bajo la curva: " TextColor="Black" Grid.Column="1" Grid.Row="0" FontSize="20" BackgroundColor="AliceBlue" x:Name="txtArea"  Margin="5"/>
+                <Entry Placeholder="α/2: " Grid.Column="0" TextColor="Black" Grid.Row="1" FontSize="20" x:Name="txtc2" Margin="5"/>
+                <Entry Placeholder="Z α/2: " TextColor="Black" Grid.Column="1" Grid.Row="1" FontSize="20" x:Name="txtzc2"  Margin="5"/>
+                <Entry Placeholder="Zo: " TextColor="Black" Grid.Column="0" Grid.Row="2" FontSize="20" BackgroundColor="AliceBlue"  x:Name="txtzo"  Margin="5"/>
+                <Entry Placeholder="α: " TextColor="Black" Grid.Column="1" Grid.Row="2" FontSize="20" BackgroundColor="AliceBlue"  x:Name="txtc"  Margin="5"/>
                 <Button Text="Calcular"  TextColor="Black" Grid.Row="3" Grid.Column="0" BackgroundColor="LightSalmon" FontSize="25" FontAttributes="Bold" Clicked="btnCalcular_Clicked" />
                 <Button Text="Limpiar"  TextColor="Black" Grid.Row="3" Grid.Column="1" FontSize="25" BackgroundColor="LightSeaGreen" FontAttributes="Bold"   Clicked="btnLimpiar_Clicked"/>
             </Grid>

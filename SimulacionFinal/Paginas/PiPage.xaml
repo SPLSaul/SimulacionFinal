@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SimulacionFinal.Paginas.PiPage"
              Title=" ">
-    <ScrollView>
+    <ScrollView BackgroundColor="White">
         <VerticalStackLayout Spacing="5">
             <Label 
             Text="Calcular el valor de Pi" TextColor="Black" FontSize="40"   
@@ -19,9 +19,9 @@
                     <RowDefinition Height="50"/>
                     <RowDefinition Height="50"/>
                 </Grid.RowDefinitions>
-                <Entry Placeholder="Numero de corridas: " Grid.Row="0" Grid.Column="0" FontSize="20" x:Name="txtCorridas" Grid.ColumnSpan="2"  Margin="5"/>
-                <Entry Placeholder="Estimacion de Pi: " Grid.Column="0" Grid.Row="1" FontSize="20" BackgroundColor="AliceBlue" Grid.ColumnSpan="2" x:Name="txtEstimacion"  Margin="5"/>
-                <Entry Placeholder="Total Cuarto " Grid.Column="0" Grid.Row="2" FontSize="20" x:Name="txtCuarto" Margin="5" Grid.ColumnSpan="2"/>
+                <Entry Placeholder="Numero de corridas: " Grid.Row="0" TextColor="Black" Grid.Column="0" FontSize="20" x:Name="txtCorridas" Grid.ColumnSpan="2"  Margin="5"/>
+                <Entry Placeholder="Estimacion de Pi: " TextColor="Black" Grid.Column="0" Grid.Row="1" FontSize="20" BackgroundColor="AliceBlue" Grid.ColumnSpan="2" x:Name="txtEstimacion"  Margin="5"/>
+                <Entry Placeholder="Total Cuarto " TextColor="Black" Grid.Column="0" Grid.Row="2" FontSize="20" x:Name="txtCuarto" Margin="5" Grid.ColumnSpan="2"/>
                 <Button Text="Calcular"  TextColor="Black" Grid.Row="3" Grid.Column="0" BackgroundColor="LightSalmon" FontSize="25" FontAttributes="Bold"  />
                 <Button Text="Limpiar"  TextColor="Black" Grid.Row="3" Grid.Column="1" FontSize="25" BackgroundColor="LightSeaGreen" FontAttributes="Bold" Clicked="btnEliminar_Clicked"/>
             </Grid>
