@@ -49,6 +49,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <PackageReference Include="MathNet.Numerics" Version="5.0.0" />
+	  <PackageReference Include="SkiaSharp" Version="2.88.3" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <MauiXaml Update="Paginas\CaraCruz.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

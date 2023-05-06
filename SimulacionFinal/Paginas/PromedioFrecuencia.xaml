@@ -36,27 +36,27 @@
                 <Label Text="0.75 - 1" Grid.Row="1" Grid.Column="4" TextColor="Black"/>
                 <!---Inicio de fila-->
                 <Label Text="FE " Grid.Row="2" Grid.Column="0" TextColor="Black"/>
-                <Label Text="  " Grid.Row="2" Grid.Column="1" TextColor="Black"/>
-                <Label Text="  " Grid.Row="2" Grid.Column="2" TextColor="Black"/>
-                <Label Text="  " Grid.Row="2" Grid.Column="3" TextColor="Black"/>
-                <Label Text="  " Grid.Row="2" Grid.Column="4" TextColor="Black"/>
+                <Label Text="  " Grid.Row="2" Grid.Column="1" TextColor="Black" x:Name="txtFe1"/>
+                <Label Text="  " Grid.Row="2" Grid.Column="2" TextColor="Black" x:Name="txtFe2"/>
+                <Label Text="  " Grid.Row="2" Grid.Column="3" TextColor="Black" x:Name="txtFe3"/>
+                <Label Text="  " Grid.Row="2" Grid.Column="4" TextColor="Black" x:Name="txtFe4"/>
                 <!---Inicio de fila-->
                 <Label Text="FO " Grid.Row="3" Grid.Column="0" TextColor="Black"/>
-                <Label Text="  " Grid.Row="3" Grid.Column="1" TextColor="Black"/>
-                <Label Text="  " Grid.Row="3" Grid.Column="2" TextColor="Black"/>
-                <Label Text="  " Grid.Row="3" Grid.Column="3" TextColor="Black"/>
-                <Label Text="  " Grid.Row="3" Grid.Column="4" TextColor="Black"/>
+                <Label Text="  " Grid.Row="3" Grid.Column="1" TextColor="Black" x:Name="txtFo1"/>
+                <Label Text="  " Grid.Row="3" Grid.Column="2" TextColor="Black" x:Name="txtFo2"/>
+                <Label Text="  " Grid.Row="3" Grid.Column="3" TextColor="Black" x:Name="txtFo3"/>
+                <Label Text="  " Grid.Row="3" Grid.Column="4" TextColor="Black" x:Name="txtFo4"/>
                 <!---Inicio de fila-->
                 <Label Text="Chi^2" Grid.Row="4" Grid.Column="0" TextColor="Black"/>
-                <Label Text=" " Grid.Row="4" Grid.Column="1" TextColor="Black"/>
-                <Label Text="  " Grid.Row="4" Grid.Column="2" TextColor="Black"/>
-                <Label Text="  " Grid.Row="4" Grid.Column="3" TextColor="Black"/>
-                <Label Text="  " Grid.Row="4" Grid.Column="4" TextColor="Black"/>
+                <Label Text=" " Grid.Row="4" Grid.Column="1" TextColor="Black" x:Name="txtChi1"/>
+                <Label Text="  " Grid.Row="4" Grid.Column="2" TextColor="Black" x:Name="txtChi2"/>
+                <Label Text="  " Grid.Row="4" Grid.Column="3" TextColor="Black" x:Name="txtChi3"/>
+                <Label Text="  " Grid.Row="4" Grid.Column="4" TextColor="Black" x:Name="txtChi4"/>
                 <!---Inicio de fila-->
-                <Label Text="Xo^2" Grid.Row="5" Grid.Column="0" TextColor="Black"/>
-                <Label Text=" " Grid.Row="4" Grid.Column="1" TextColor="Black"/>
-                <Label Text="Valor de tablas" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2" TextColor="Black"/>
-                <Label Text=" " Grid.Row="5" Grid.Column="4" TextColor="Black"/>
+                <Label Text="Xo^2" Grid.Row="5" Grid.Column="0" TextColor="Black" />
+                <Label Text=" " Grid.Row="5" Grid.Column="1" TextColor="Black" x:Name="txtChiCuadrada"/>
+                <Label Text="Valor de tablas" Grid.Row="5"  Grid.ColumnSpan="2" TextColor="Black"/>
+                <Label Text=" " Grid.Row="5" Grid.Column="4" TextColor="Black"  x:Name="txtChiTablas"/>
                 <!---Inicio de Botones-->
                 <Button Text="Calcular"  TextColor="Black" Grid.Row="6" Grid.Column="0" BackgroundColor="LightSalmon" FontSize="25" FontAttributes="Bold" Grid.ColumnSpan="2"/>
                 <Button Text="Limpiar"  TextColor="Black" Grid.Row="6" Grid.Column="3" FontSize="25" BackgroundColor="LightSeaGreen" FontAttributes="Bold"  Grid.ColumnSpan="2"/>

@@ -18,12 +18,15 @@
                     <RowDefinition Height="50"/>
                     <RowDefinition Height="50"/>
                     <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
                 </Grid.RowDefinitions>
                 <Entry Placeholder="Juegos: " Grid.Row="0" Grid.Column="0" FontSize="20" x:Name="txtJuegos" Grid.ColumnSpan="2"  Margin="5"/>
                 <Entry Placeholder="Cantidad en mano: " Grid.Column="0" Grid.Row="1" FontSize="20" BackgroundColor="AliceBlue" Grid.ColumnSpan="2" x:Name="txtMano"  Margin="5"/>
                 <Entry Placeholder="Apuesta Inicial: " Grid.Column="0" Grid.Row="2" FontSize="20" x:Name="txtApuesta" Margin="5" Grid.ColumnSpan="2"/>
-                <Button Text="Jugar"  TextColor="Black" Grid.Row="3" Grid.Column="0" BackgroundColor="LightSalmon" FontSize="25" FontAttributes="Bold"  />
-                <Button Text="Limpiar"  TextColor="Black" Grid.Row="3" Grid.Column="1" FontSize="25" BackgroundColor="LightSeaGreen" FontAttributes="Bold" />
+                <Label Text="Victorias: " Grid.Column="0" Grid.Row="3" FontSize="20" BackgroundColor="AliceBlue" x:Name="txtGanadas" />
+                <Label Text="Derrotas: " Grid.Column="1" Grid.Row="3" FontSize="20" TextColor="Red" x:Name="txtPerdidas" />
+                <Button Text="Jugar"  TextColor="Black" Grid.Row="4" Grid.Column="0" BackgroundColor="LightSalmon" FontSize="25" FontAttributes="Bold"  />
+                <Button Text="Limpiar"  TextColor="Black" Grid.Row="4" Grid.Column="1" FontSize="25" BackgroundColor="LightSeaGreen" FontAttributes="Bold" />
             </Grid>
         </VerticalStackLayout>
     </ScrollView>
