@@ -23,7 +23,7 @@
                 <Entry Placeholder="Estimacion de Pi: " Grid.Column="0" Grid.Row="1" FontSize="20" BackgroundColor="AliceBlue" Grid.ColumnSpan="2" x:Name="txtEstimacion"  Margin="5"/>
                 <Entry Placeholder="Total Cuarto " Grid.Column="0" Grid.Row="2" FontSize="20" x:Name="txtCuarto" Margin="5" Grid.ColumnSpan="2"/>
                 <Button Text="Calcular"  TextColor="Black" Grid.Row="3" Grid.Column="0" BackgroundColor="LightSalmon" FontSize="25" FontAttributes="Bold"  />
-                <Button Text="Limpiar"  TextColor="Black" Grid.Row="3" Grid.Column="1" FontSize="25" BackgroundColor="LightSeaGreen" FontAttributes="Bold" />
+                <Button Text="Limpiar"  TextColor="Black" Grid.Row="3" Grid.Column="1" FontSize="25" BackgroundColor="LightSeaGreen" FontAttributes="Bold" Clicked="btnEliminar_Clicked"/>
             </Grid>
         </VerticalStackLayout>
     </ScrollView>

@@ -1,11 +1,13 @@
 using Microsoft.Maui.Controls;
+using System;
 using System.Collections.ObjectModel;
 
 namespace SimulacionFinal.Paginas;
 
 public partial class Generador : ContentPage
 {
-    public static double[] Almacenar;
+    public static double[] Almacenar ;
+    public static int Num;
     List<GeneradorPseudo> generados = new List<GeneradorPseudo>();
     ViewModel viewModel = new ViewModel();
 
@@ -36,7 +38,7 @@ public partial class Generador : ContentPage
                 double C = Convert.ToDouble(txtc.Text);
                 double Xo = Convert.ToDouble(txtXo.Text);
                 double M = Convert.ToDouble(txtm.Text);
-                int Num = int.Parse(txtNumerosGenerar.Text);
+                Num = int.Parse(txtNumerosGenerar.Text);
                 Almacenar = new double[Num];
                 //Confirma que los valores sean mayores a 0
                 if (Convert.ToDouble(txtA.Text) > 0 && Convert.ToDouble(txtc.Text) > 0 && Convert.ToDouble(txtXo.Text) > 0 && Convert.ToDouble(txtm.Text) > 0)
@@ -70,13 +72,15 @@ public partial class Generador : ContentPage
                 {
                 DisplayAlert("Error","No se cumplen los parametros de A > 0, C > 0 y Xn > 0","Ok");
                 }
-            }
+           // PruebaPromedio pruebaPromedio = new PruebaPromedio();
+            //pruebaPromedio.RecibirLista(Almacenar, Num);
+           // DisplayAlert("Notificacion", $"Instancia de promedio valores {Almacenar.Length}", "Ok");
+        }
             catch (FormatException)
             {
             DisplayAlert("Error","No se ingreso algun dato correcto, recuerde que tiene que tener valores numericos","Error");
             }
 
-        PruebaPromedio pruebaPromedio = new PruebaPromedio();
-        pruebaPromedio.RecibirLista(viewModel._generados, Almacenar);
+        
     }
 }
