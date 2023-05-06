@@ -19,7 +19,7 @@ public partial class PiPage : ContentPage
 
     private void btnCalcular_Clicked(object sender, EventArgs e)
 	{
-        Almacenar = Generador.Almacenar;
+       /* Almacenar = Generador.Almacenar;
         if (Almacenar != null)
         {
             try
@@ -70,6 +70,6 @@ public partial class PiPage : ContentPage
         else
         {
             DisplayAlert("ALERTA","Por favor genere primero los numeros pseudoaleatorios","Ok");
-        }
+        }*/
     }
 }
