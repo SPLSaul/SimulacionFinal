@@ -17,5 +17,7 @@ namespace SimulacionFinal
 
             };            
         }
+
+        public ObservableCollection<Generado> generados = new ObservableCollection<Generado>();
     }
 }

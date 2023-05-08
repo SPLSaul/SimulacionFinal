@@ -8,7 +8,7 @@ public partial class Generador : ContentPage
 {
     public static double[] Almacenar ;
     public static int Num;
-    List<GeneradorPseudo> generados = new List<GeneradorPseudo>();
+    //List<GeneradorPseudo> generados = new List<GeneradorPseudo>();
     ViewModel viewModel = new ViewModel();
 
 
@@ -28,28 +28,28 @@ public partial class Generador : ContentPage
 
         // Asignar la nueva instancia vacía al ItemsSource del CollectionView
         miCollectionView.ItemsSource = viewModel._generados;
-    }   
+    }
     private void btnGenerar_Clicked(object sender, EventArgs e)
     {
         double xn, proc, proc1, proc2;
-            try
+        try
+        {
+            double A = Convert.ToDouble(txtA.Text);
+            double C = Convert.ToDouble(txtc.Text);
+            double Xo = Convert.ToDouble(txtXo.Text);
+            double M = Convert.ToDouble(txtm.Text);
+            Num = int.Parse(txtNumerosGenerar.Text);
+            Almacenar = new double[Num];
+            //Confirma que los valores sean mayores a 0
+            if (Convert.ToDouble(txtA.Text) > 0 && Convert.ToDouble(txtc.Text) > 0 && Convert.ToDouble(txtXo.Text) > 0 && Convert.ToDouble(txtm.Text) > 0)
             {
-                double A = Convert.ToDouble(txtA.Text);
-                double C = Convert.ToDouble(txtc.Text);
-                double Xo = Convert.ToDouble(txtXo.Text);
-                double M = Convert.ToDouble(txtm.Text);
-                Num = int.Parse(txtNumerosGenerar.Text);
-                Almacenar = new double[Num];
-                //Confirma que los valores sean mayores a 0
-                if (Convert.ToDouble(txtA.Text) > 0 && Convert.ToDouble(txtc.Text) > 0 && Convert.ToDouble(txtXo.Text) > 0 && Convert.ToDouble(txtm.Text) > 0)
+                if (Convert.ToDouble(txtm.Text) > Convert.ToDouble(txtXo.Text) && Convert.ToDouble(txtm.Text) > Convert.ToDouble(txtA.Text) && Convert.ToDouble(txtm.Text) > Convert.ToDouble(txtc.Text))
                 {
-                    if (Convert.ToDouble(txtm.Text) > Convert.ToDouble(txtXo.Text) && Convert.ToDouble(txtm.Text) > Convert.ToDouble(txtA.Text) && Convert.ToDouble(txtm.Text) > Convert.ToDouble(txtc.Text))
-                    {
-                    
+
 
                     //Generador de numeros pseudoaleatorios
                     for (int i = 0; i < Num; i++)
-                        {
+                    {
                         xn = Xo;
                         proc = (A * xn) + C;
                         proc1 = proc % M;
@@ -59,28 +59,28 @@ public partial class Generador : ContentPage
                         Almacenar[i] = proc2;
 
                         // Agregar un nuevo elemento GeneradorPseudo a la lista en cada iteración del ciclo
-                        viewModel._generados.Add(new GeneradorPseudo { Iteracion = i, numero = proc2 });                       
+                        viewModel._generados.Add(new GeneradorPseudo { Iteracion = i, numero = proc2 });
                     }
                     miCollectionView.BindingContext = viewModel;
                 }
                 else
-                    {
-                        DisplayAlert("Error","No se cumplen los parametros de M > A, M > C y M > Xo","Ok");
-                    }
-                }
-                else
                 {
-                DisplayAlert("Error","No se cumplen los parametros de A > 0, C > 0 y Xn > 0","Ok");
+                    DisplayAlert("Error", "No se cumplen los parametros de M > A, M > C y M > Xo", "Ok");
                 }
-           // PruebaPromedio pruebaPromedio = new PruebaPromedio();
-            //pruebaPromedio.RecibirLista(Almacenar, Num);
-           // DisplayAlert("Notificacion", $"Instancia de promedio valores {Almacenar.Length}", "Ok");
-        }
-            catch (FormatException)
-            {
-            DisplayAlert("Error","No se ingreso algun dato correcto, recuerde que tiene que tener valores numericos","Error");
             }
+            else
+            {
+                DisplayAlert("Error", "No se cumplen los parametros de A > 0, C > 0 y Xn > 0", "Ok");
+            }
+            // PruebaPromedio pruebaPromedio = new PruebaPromedio();
+            //pruebaPromedio.RecibirLista(Almacenar, Num);
+            // DisplayAlert("Notificacion", $"Instancia de promedio valores {Almacenar.Length}", "Ok");
+        }
+        catch (FormatException)
+        {
+            DisplayAlert("Error", "No se ingreso algun dato correcto, recuerde que tiene que tener valores numericos", "Error");
+        }
 
-        
+
     }
 }
