@@ -1,9 +1,15 @@
+using MathNet.Numerics;
+using System.Diagnostics;
+
 namespace SimulacionFinal.Paginas;
 
 public partial class PiPage : ContentPage
 {
     public double[] Almacenar;
     public static double N, x = 0, PiCal, evaluar;
+    //ViewModel viewModel = new ViewModel();
+    ViewModel generados = new ViewModel();
+
     public PiPage()
 	{
 		InitializeComponent();
@@ -17,11 +23,14 @@ public partial class PiPage : ContentPage
 
     }
 
-    private void btnCalcular_Clicked(object sender, EventArgs e)
-	{
-       /* Almacenar = Generador.Almacenar;
+    private async void btnCalcular_Clicked(object sender, EventArgs e)
+    {
+        await DisplayAlert("Mensaje", "Click en calcular", "OK");
+        Almacenar = Generador.Almacenar;
+
         if (Almacenar != null)
         {
+            await DisplayAlert("Mensaje", $"Cantidad de numeros {Almacenar.Length} dentro del if", "OK");
             try
             {
                 //Asignacion de variables
@@ -29,29 +38,15 @@ public partial class PiPage : ContentPage
 
                 for (int i = 0; i < N; i++)
                 {
-                    //Agregamos valores a las columnas del dataGridJuego
-                    int n = dataGridJuego.Rows.Add();
+                    Generado nuevoGenerado = new Generado();
+                    nuevoGenerado.Id = i + 1;
+                    nuevoGenerado.Valor1 = Almacenar[i];
+                    nuevoGenerado.Valor2 = Almacenar[i + 2];
+                    nuevoGenerado.R = Math.Sqrt(Math.Pow(Almacenar[i], 2) + Math.Pow(Almacenar[i + 1], 2));
+                    nuevoGenerado.EstaEnSector = (nuevoGenerado.R < 1) ? "Si" : "No";
+                    await DisplayAlert("", $"Antes de agregar a generados {nuevoGenerado.Valor1}", "OK");
 
-                    dataGridJuego.Rows[n].Cells[0].Value = (i + 1);
-                    dataGridJuego.Rows[n].Cells[1].Value = Almacenar[i];
-                    dataGridJuego.Rows[n].Cells[2].Value = Almacenar[i + 2];
-
-                    //calculamos R1 Y R2
-                    evaluar = Math.Sqrt(Math.Pow(Almacenar[i], 2) + Math.Pow(Almacenar[i + 1], 2));
-                    dataGridJuego.Rows[n].Cells[3].Value = evaluar;
-
-                    //Se decide si esta o no en el Sector
-                    if (evaluar < 1)
-                    {
-                        //sumar 1 en x por cada si
-                        dataGridJuego.Rows[n].Cells[4].Value = "Si";
-                        x = x + 1;
-                    }
-                    else
-                    {
-                        dataGridJuego.Rows[n].Cells[4].Value = "No";
-
-                    }
+                    generados.generados.Add(nuevoGenerado);
                 }
 
                 txtCuarto.Text = x.ToString();
@@ -60,16 +55,18 @@ public partial class PiPage : ContentPage
                 PiCal = 4 * (x / N);
                 txtEstimacion.Text = PiCal.ToString();
 
+                miCollectionView.BindingContext = generados;
             }
             catch (FormatException)
             {
-                DisplayAlert("ALERTA","Solo valores Numericos por favor","OK");
+                await DisplayAlert("ALERTA", "Solo valores Numericos por favor", "OK");
             }
 
         }
         else
         {
-            DisplayAlert("ALERTA","Por favor genere primero los numeros pseudoaleatorios","Ok");
-        }*/
+            await DisplayAlert("ALERTA", "Por favor genere primero los numeros pseudoaleatorios", "Ok");
+        }
     }
+
 }

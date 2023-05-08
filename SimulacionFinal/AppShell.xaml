@@ -20,18 +20,19 @@
         </Tab>
     </FlyoutItem>
 
+
     <FlyoutItem Title="Cara o Cruz">
         <Tab Title="Numeros Pseudoaleatorios"  >
-            <ShellContent Title="Generador" ContentTemplate="{DataTemplate local:Paginas.Generador}" Route="Paginas.Generador"  />
+            <ShellContent Title="Generador" ContentTemplate="{DataTemplate local:Paginas.Generador}" Route="Paginas.Generador.Flyout1"  />
             <ShellContent Title="Apuesta" ContentTemplate="{DataTemplate local:Paginas.CaraCruz}" Route="Paginas.CaraCruz"/>
         </Tab>
     </FlyoutItem>
 
+
     <FlyoutItem Title="Pi">
         <Tab Title="Numeros Pseudoaleatorios"  >
-            <ShellContent Title="Generador" ContentTemplate="{DataTemplate local:Paginas.Generador}" Route="Paginas.Generador"  />
+            <ShellContent Title="Generador" ContentTemplate="{DataTemplate local:Paginas.Generador}" Route="Paginas.Generador.Flyout2"  />
             <ShellContent Title="Pi" ContentTemplate="{DataTemplate local:Paginas.PiPage}" Route="Paginas.PiPage"/>
         </Tab>
     </FlyoutItem>
 </Shell>
-
