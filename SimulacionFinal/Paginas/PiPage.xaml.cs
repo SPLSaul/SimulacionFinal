@@ -17,15 +17,15 @@ public partial class PiPage : ContentPage
 
     private void btnEliminar_Clicked(object sender, EventArgs e)
 	{
-		txtCorridas.Text = string.Empty;
-        txtCuarto.Text = string.Empty;
+		
         txtEstimacion.Text = string.Empty;
 
     }
 
     private async void btnCalcular_Clicked(object sender, EventArgs e)
     {
-        await DisplayAlert("Mensaje", "Click en calcular", "OK");
+        int dentro_del_circulo = 0;
+
         Almacenar = Generador.Almacenar;
 
         if (Almacenar != null)
@@ -36,26 +36,20 @@ public partial class PiPage : ContentPage
                 //Asignacion de variables
                 N = Generador.Num;
 
-                for (int i = 0; i < N; i++)
+                for (int i = 0; i < N - 1; i++)
                 {
-                    Generado nuevoGenerado = new Generado();
-                    nuevoGenerado.Id = i + 1;
-                    nuevoGenerado.Valor1 = Almacenar[i];
-                    nuevoGenerado.Valor2 = Almacenar[i + 2];
-                    nuevoGenerado.R = Math.Sqrt(Math.Pow(Almacenar[i], 2) + Math.Pow(Almacenar[i + 1], 2));
-                    nuevoGenerado.EstaEnSector = (nuevoGenerado.R < 1) ? "Si" : "No";
-                    await DisplayAlert("", $"Antes de agregar a generados {nuevoGenerado.Valor1}", "OK");
-
-                    generados.generados.Add(nuevoGenerado);
+                    double x = Almacenar[i];
+                    double y = Almacenar[i + 1];
+                    if (x * x + y * y <= 1)
+                    {
+                        dentro_del_circulo++;
+                    }
                 }
 
-                txtCuarto.Text = x.ToString();
+                double pi_aproximado = 4.0 * dentro_del_circulo / N;
+                txtEstimacion.Text = pi_aproximado.ToString();
 
-                //calcular pi
-                PiCal = 4 * (x / N);
-                txtEstimacion.Text = PiCal.ToString();
-
-                miCollectionView.BindingContext = generados;
+               
             }
             catch (FormatException)
             {
