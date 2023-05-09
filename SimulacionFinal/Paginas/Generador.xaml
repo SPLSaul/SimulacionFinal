@@ -26,8 +26,7 @@
                 <Entry Placeholder="Numeros a generar" Grid.ColumnSpan="2" Grid.Row="0" FontSize="20" x:Name="txtNumerosGenerar"  Margin="5" TextColor="Black"/>
                 <Entry Placeholder="A" Grid.Column="0" Grid.Row="1" FontSize="20" BackgroundColor="AliceBlue" x:Name="txtA"  Margin="5" TextColor="Black"/>
                 <Entry Placeholder="c" Grid.Column="1" Grid.Row="1" FontSize="20" x:Name="txtc" Margin="5" TextColor="Black"/>
-                <Entry Placeholder="Xo" Grid.Column="0" Grid.Row="2" FontSize="20" x:Name="txtXo"  Margin="5" TextColor="Black"/>
-                <Entry Placeholder="m" Grid.Column="1" Grid.Row="2" FontSize="20" BackgroundColor="AliceBlue"  x:Name="txtm"  Margin="5" TextColor="Black"/>
+                <Entry Placeholder="m" Grid.Column="0" Grid.Row="2" FontSize="20" BackgroundColor="AliceBlue"  x:Name="txtm"  Margin="5" TextColor="Black"/>
                 <Button Text="Generar"  TextColor="Black" Grid.Row="3" Grid.Column="0" BackgroundColor="LightSalmon" FontSize="25" FontAttributes="Bold" Clicked="btnGenerar_Clicked" />
                 <Button Text="Limpiar"  TextColor="Black" Grid.Row="3" Grid.Column="1" FontSize="25" BackgroundColor="LightSeaGreen" FontAttributes="Bold" Clicked="btnEliminar_Clicked"/>
             </Grid>
