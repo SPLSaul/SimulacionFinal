@@ -5,9 +5,7 @@
              Title=" ">
     <ScrollView BackgroundColor="White">
         <VerticalStackLayout Spacing="5">
-            <Label 
-            Text="Realizar una apuesta" TextColor="Black" FontSize="40"   
-            HorizontalOptions="Center" Margin="0,10,0,0"/>
+           
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width=".5*"/>
@@ -17,16 +15,13 @@
                     <RowDefinition Height="50"/>
                     <RowDefinition Height="50"/>
                     <RowDefinition Height="50"/>
-                    <RowDefinition Height="50"/>
-                    <RowDefinition Height="50"/>
                 </Grid.RowDefinitions>
-                <Entry Placeholder="Juegos: " Grid.Row="0" Grid.Column="0" FontSize="20" x:Name="txtJuegos" Grid.ColumnSpan="2"  Margin="5" TextColor="Black"/>
-                <Entry Placeholder="Cantidad en mano: " TextColor="Black" Grid.Column="0" Grid.Row="1" FontSize="20" BackgroundColor="AliceBlue" Grid.ColumnSpan="2" x:Name="txtMano"  Margin="5"/>
-                <Entry Placeholder="Apuesta Inicial: " TextColor="Black" Grid.Column="0" Grid.Row="2" FontSize="20" x:Name="txtApuesta" Margin="5" Grid.ColumnSpan="2"/>
-                <Label Text="Victorias: " TextColor="Black" Grid.Column="0" Grid.Row="3" FontSize="20" BackgroundColor="AliceBlue" x:Name="txtGanadas" />
-                <Label Text="Derrotas: " Grid.Column="1" Grid.Row="3" FontSize="20" TextColor="Red" x:Name="txtPerdidas" />
-                <Button Text="Jugar"  TextColor="Black" Grid.Row="4" Grid.Column="0" BackgroundColor="LightSalmon" FontSize="25" FontAttributes="Bold"  />
-                <Button Text="Limpiar"  TextColor="Black" Grid.Row="4" Grid.Column="1" FontSize="25" BackgroundColor="LightSeaGreen" FontAttributes="Bold" />
+                <Label Text="Cara: " TextColor="Black" Grid.Column="0" Grid.Row="0" FontSize="20" BackgroundColor="AliceBlue" />
+                <Label Text="Cruz: " Grid.Column="1" Grid.Row="0" FontSize="20" TextColor="Red" />
+                <Label Text=" " TextColor="Black" Grid.Column="0" Grid.Row="1" FontSize="20" BackgroundColor="AliceBlue" x:Name="txtCara"  />
+                <Label Text=" " Grid.Column="1" Grid.Row="1" FontSize="20" TextColor="Red" x:Name="txtCruz" />
+                <Button Text="Calcular"  TextColor="Black" Grid.Row="4" Grid.Column="0" BackgroundColor="LightSalmon" FontSize="25" FontAttributes="Bold" Clicked="btnJugar_Clicked"  />
+                <Button Text="Limpiar"  TextColor="Black" Grid.Row="4" Grid.Column="1" FontSize="25" BackgroundColor="LightSeaGreen" FontAttributes="Bold" Clicked="btnLimpiar_Clicked" />
             </Grid>
         </VerticalStackLayout>
     </ScrollView>

@@ -8,11 +8,11 @@
             Spacing="25"
             Padding="30,0"
             VerticalOptions="Center">
-            <Button Text="Generador" FontSize="60" BackgroundColor="LightBlue" TextColor="Black" Clicked="btnGenerador_Clicked"/>
-            <Button Text="Cara o cruz" FontSize="50"  BackgroundColor="LightCoral" TextColor="Black" Clicked="btnCara_Clicked"/>
-            <Button Text="PI" FontSize="60"  BackgroundColor="LightGreen" TextColor="Black" Clicked="btnPI_Clicked"/>
-            <Button Text="+ Info" FontSize="60"  BackgroundColor="LightGoldenrodYellow" TextColor="Black" Clicked="btnInfo_Clicked"/>
-            <Button Text="Salir" FontSize="60"  BackgroundColor="LightPink" TextColor="Black" Clicked="btnExit_Clicked"/>
+            <Button BorderColor="Gray" BorderWidth="3" Text="Generador" FontSize="60" BackgroundColor="LightBlue" TextColor="Black" Clicked="btnGenerador_Clicked"/>
+            <Button BorderColor="Gray" BorderWidth="3"  Text="Cara o cruz" FontSize="50"  BackgroundColor="LightCoral" TextColor="Black" Clicked="btnCara_Clicked"/>
+            <Button BorderColor="Gray" BorderWidth="3"  Text="PI" FontSize="60"  BackgroundColor="LightGreen" TextColor="Black" Clicked="btnPI_Clicked"/>
+            <Button BorderColor="Gray" BorderWidth="3" Text="+ Info" FontSize="60"  BackgroundColor="LightGoldenrodYellow" TextColor="Black" Clicked="btnInfo_Clicked"/>
+            <Button BorderColor="Gray" BorderWidth="3" Text="Salir" FontSize="60"  BackgroundColor="LightPink" TextColor="Black" Clicked="btnExit_Clicked"/>
         </VerticalStackLayout>
     </ScrollView>
 
