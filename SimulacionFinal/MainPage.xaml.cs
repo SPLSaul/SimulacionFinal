@@ -1,4 +1,5 @@
 ﻿using SimulacionFinal.Paginas;
+using Microsoft.Maui;
 
 namespace SimulacionFinal;
 
@@ -30,29 +31,12 @@ public partial class MainPage : ContentPage
     }
     private async void btnInfo_Clicked(object sender, EventArgs e)
     {
-        await Shell.Current.GoToAsync("///Paginas.Generador");
+        await Shell.Current.GoToAsync("///Paginas.Info");
     }
 
-
-
-
-
-    /*private void btnCara_Clicked(object sender, EventArgs e)
-    {
-        Navigation.PushAsync(new Generador());
-    }
-    private void btnPI_Clicked(object sender, EventArgs e)
-    {
-        Navigation.PushAsync(new Generador());
-    }
-    private void btnInfo_Clicked(object sender, EventArgs e)
-    {
-
-    }*/
     private void btnExit_Clicked(object sender, EventArgs e)
     {
-
+         App.Current.Quit();
     }
-
 }
 

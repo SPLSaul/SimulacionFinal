@@ -6,6 +6,7 @@
              BackgroundColor="White"   
              
              Title="Pruebas estadisticas">
+
     
     <ScrollView>
     <VerticalStackLayout Spacing="5">
